@@ -1,0 +1,29 @@
+@import "../../styles/sass/variables";
+@import "../../styles/sass/mixins";
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .logo {
+  // background-image: url("../src/assets/image/Logo.png");
+  }
+  .links_block{
+   color: $grey;
+    @include font_14_500();
+    padding: 20px 0;
+    .link{
+    padding-left: 48px;
+      &:hover{
+        color: $blue;
+      }
+    }
+  }
+  .switchers_block{
+
+  }
+  .menu_button{
+
+  }
+
+}

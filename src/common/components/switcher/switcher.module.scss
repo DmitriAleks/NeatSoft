@@ -1,0 +1,18 @@
+@import "../../styles/sass/variables";
+@import "../../styles/sass/mixins";
+
+
+.block{
+  margin: 0 12px;
+  display: flex;
+  justify-content: space-around;
+  background-color: $white;
+  width: 86px;
+  border-radius: 100px;
+  @include font_14_500();
+  padding: 5px 0;
+
+  .active{
+   background: $blue;
+  }
+}

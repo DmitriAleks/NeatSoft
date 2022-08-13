@@ -1,0 +1,57 @@
+@import "../../styles/sass/variables";
+@import "../../styles/sass/mixins";
+
+.content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 160px 0;
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: none;
+    text-align: center;
+  }
+
+  .greetings{
+    @media screen and (max-width: $tablet) {
+      padding: 0 75px;
+    }
+    @media screen and (max-width: $phone) {
+      padding: 0 34px;
+    }
+
+    .title{
+      @include font_96_600();
+      color: $black_2;
+      letter-spacing: -4.1px;
+      margin-bottom: 48px;
+      //@media screen and (max-width: $tablet) {
+      //  letter-spacing: -6.1px;
+      //}
+
+
+    }
+    .blue_title{
+      color: $blue;
+    }
+    .description {
+      @include font_20_400();
+      color: $black_2;
+    }
+  }
+
+  .tecnologi_stack{
+ //   background-image: url("../src/assets/image/technologiStack.png");
+    @media screen and (max-width: $tablet) {
+     display: none;
+    }
+
+  }
+  .scroller{
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+      display: flex;
+    }
+  }
+
+}

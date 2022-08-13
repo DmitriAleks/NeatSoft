@@ -4,8 +4,25 @@
   height: 50%
   width: 1200px
   margin: 0 auto
+  @media screen and (max-width: $tablet)
+    width: auto
+
 
 
 @mixin font_14_500()
   font-weight: 500
   font-size: 14px
+
+@mixin font_20_400()
+  font-weight: 400
+  font-size: 20px
+  @media screen and (max-width: $phone)
+    font-weight: 400
+    font-size: 16px
+
+@mixin font_96_600()
+  font-weight: 600
+  font-size: 96px
+  @media screen and (max-width: $phone)
+    font-weight: 600
+    font-size: 44px

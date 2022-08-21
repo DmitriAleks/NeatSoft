@@ -27,12 +27,11 @@
   }
   .switchers_block{
     display: flex;
-    //:nth-child(1){
-    //  @media screen and (max-width: $phone) {
-    //    display: none;
-    //  }
-    //}
-
+    .hide_button{
+      @media screen and (max-width: $phone) {
+        display: none;
+      }
+    }
   }
   .menu_button{
   margin-left: 30px;

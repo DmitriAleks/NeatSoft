@@ -1,17 +1,23 @@
 @import "../../styles/sass/variables";
 @import "../../styles/sass/mixins";
 
-.content{
+.content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 160px 0;
   @media screen and (max-width: $tablet) {
+    gap: 80px;
+  }
+  @media screen and (max-width: $phone) {
+    gap: 62px;
+  }
+  @media screen and (max-width: $tablet) {
     grid-template-columns: none;
     text-align: center;
   }
 
-  .greetings{
+  .greetings {
     @media screen and (max-width: $tablet) {
       padding: 0 75px;
     }
@@ -19,39 +25,45 @@
       padding: 0 34px;
     }
 
-    .title{
+    .title {
       @include font_96_600();
       color: $black_2;
       letter-spacing: -4.1px;
       margin-bottom: 48px;
-      //@media screen and (max-width: $tablet) {
-      //  letter-spacing: -6.1px;
-      //}
-
-
     }
-    .blue_title{
+
+    .blue_title {
       color: $blue;
     }
+
     .description {
       @include font_20_400();
       color: $black_2;
     }
   }
 
-  .tecnologi_stack{
- //   background-image: url("../src/assets/image/technologiStack.png");
+  .tecnologi_stack {
     @media screen and (max-width: $tablet) {
-     display: none;
+      display: none;
     }
 
   }
-  .scroller{
+
+  .carousel_wrapper {
     display: none;
 
     @media screen and (max-width: $tablet) {
       display: flex;
+      width: auto;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+      .icon {
+        padding: 0 20px;
+      }
     }
+
   }
 
 }

@@ -1,0 +1,48 @@
+@import "../../../styles/sass/variables";
+@import "../../../styles/sass/mixins";
+
+
+.card_block {
+  background-color: #FCFCFC;
+  padding: 56px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  @include font_48_600();
+  line-height: 1;
+  letter-spacing: -2.1px;
+  color: $black_2;
+  @media screen and (max-width: $tablet) {
+    padding: 40px;
+  }
+  @media screen and (max-width: $phone) {
+    padding: 32px;
+  }
+
+  .text {
+    background-image: linear-gradient(45deg, #5c6cfd, #11163a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .footer_card{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 18px;
+    margin-top: 47px;
+    @media screen and (max-width: $tablet) {
+      margin-top: 36px;
+    }
+    @media screen and (max-width: $phone) {
+      margin-top: 24px;
+    }
+    .hide_text {
+      @include font_16_500();
+      color: $blue;
+      display: none;
+      @media screen and (max-width: $tablet) {
+        display: inline;
+      }
+    }
+  }
+
+}

@@ -26,10 +26,12 @@ export const Header = () => {
             </div>
             <div className={style.button_block}>
                 <div className={style.switchers_block}>
-                    <Switcher name={['RU', 'EN']}/>
+                    <div className={style.hide_button}>
+                        <Switcher name={['RU', 'EN']}/>
+                    </div>
+
                     <Switcher name={['L', 'N']}/>
                 </div>
-                {/*<button onClick={toggleTheme}>thema</button>*/}
                 <button className={style.menu_button}><img src={burger} alt="Кнопка"/></button>
             </div>
         </div>

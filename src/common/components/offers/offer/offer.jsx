@@ -1,5 +1,5 @@
 import style from './offer.module.scss'
-import arrow from '../../../../assets/icon/Arrow.svg'
+// import arrow from '../../../../assets/icon/Arrow.svg'
 
 export const Offer = ({descriptionPathOne, descriptionPathTwo, descriptionPathThree}) => {
     return (
@@ -15,7 +15,7 @@ export const Offer = ({descriptionPathOne, descriptionPathTwo, descriptionPathTh
             </span>
             <div className={style.footer_card}>
                 <span className={style.hide_text}>Поброднее</span>
-                <img src={arrow} alt=""/>
+                {/*<img src={arrow} alt=""/>*/}
             </div>
 
         </div>

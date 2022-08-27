@@ -1,27 +1,33 @@
 import style from './switcher.module.scss'
 import {useEffect, useState} from "react";
 
-export const Switcher = ({name}) => {
+export const Switcher = ({name, toggleTheme, className}) => {
+    const LEFT_PART_BUTTON = 'left'
+    const RIGHT_PART_BUTTON = 'right'
     const [selected, setSelected] = useState('left')
     useEffect(() => {
-        console.log("left" === selected)
-    }, [selected])
-
+        document.body.setAttribute('data-theme', selected)
+    }, [selected]);
 
     return (
-        <div className={style.block}>
-            <div className={"left" === selected ? "active" : ""}
+        <div className={`${style.block} ${className}`}>
+            <div className={`${style.side} ${LEFT_PART_BUTTON === selected ? style.active : ""}`}
                  onClick={() => {
-                     setSelected('left')
+                     setSelected(LEFT_PART_BUTTON)
+                     if(selected !== LEFT_PART_BUTTON){
+                         toggleTheme()
+                     }
                  }
                  }>{name[0]}</div>
-            <div className={"right" === selected ? "active" : ""}
+            <div className={`${style.side} ${RIGHT_PART_BUTTON === selected ? style.active : ""}`}
                  onClick={() => {
-                     setSelected('right')
+                     setSelected(RIGHT_PART_BUTTON)
+                     if(selected !== RIGHT_PART_BUTTON){
+                         toggleTheme()
+                     }
                  }
                  }
             >{name[1]}</div>
         </div>
     )
-
 }

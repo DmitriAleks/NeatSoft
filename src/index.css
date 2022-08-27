@@ -94,17 +94,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/*body[data-theme='dark'] {*/
-/*  --colors-text: hsl(0, 0%, 100%);*/
-/*  background:#ffffff;*/
-/*  --colors-ui-base: hsl(209, 23%, 22%);*/
+body[data-theme='light'] {
+  --colors-text: hsl(0, 0%, 100%);
+  background:#ffffff;
+  --colors-ui-base: hsl(209, 23%, 22%);
 
-/*  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;*/
-/*}*/
-/*body[data-theme='light'] {*/
-/*  background: hsl(200, 15%, 8%);*/
-/*  text: hsl(0, 0%, 98%);*/
-/*  --colors-ui-base: hsl(0, 0%, 100%);*/
+  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+}
+body[data-theme='dark'] {
+  background: hsl(200, 15%, 8%);
+  text: hsl(0, 0%, 98%);
+  --colors-ui-base: hsl(0, 0%, 100%);
 
-/*  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
-/*}*/
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

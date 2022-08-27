@@ -1,5 +1,5 @@
 import style from './offer.module.scss'
-import arrow from '../../../../assets/icon/Arrow.svg'
+import arrow from '../../../../assets/icon/arrow.svg'
 
 export const Offer = ({descriptionPathOne, descriptionPathTwo, descriptionPathThree}) => {
     return (

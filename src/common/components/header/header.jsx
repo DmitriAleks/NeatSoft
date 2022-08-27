@@ -1,36 +1,40 @@
 import style from './header.module.scss'
-import Logo from "../../../assets/image/Logo.png"
+import logo from "../../../assets/image/logo.svg"
 import burger from "../../../assets/icon/burger.svg"
 import {useEffect, useState} from "react";
 import {Switcher} from "../switcher/switcher";
 
+
+const LIGHT_THEME = 'light'
+const DARK_THEME = 'dark'
+
 export const Header = () => {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(LIGHT_THEME);
     useEffect(() => {
         document.body.setAttribute('data-theme', theme)
     }, [theme]);
     const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light')
+        setTheme(theme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME)
     }
+    const arrLinks = [
+        {name: 'О компании'},
+        {name: 'Услуги'},
+        {name: 'Вакансии'},
+        {name: 'Новости'},
+        {name: 'Школа'},
+        {name: 'Контакты'}
+    ]
+
     return (
         <div className={style.header}>
-            <img src={Logo} alt="Logo"/>
-            <div className={style.logo}></div>
+           <img src={logo} alt="Logo"/>
             <div className={style.links_block}>
-                <a className={style.link}>О компании</a>
-                <a className={style.link}>Услуги</a>
-                <a className={style.link}>Вакансии</a>
-                <a className={style.link}>Новости</a>
-                <a className={style.link}>Школа</a>
-                <a className={style.link}>Контакты</a>
+                {arrLinks.map(el=> <a className={style.link}>{el.name}</a>)}
             </div>
             <div className={style.button_block}>
                 <div className={style.switchers_block}>
-                    <div className={style.hide_button}>
-                        <Switcher name={['RU', 'EN']}/>
-                    </div>
-
-                    <Switcher name={['L', 'N']}/>
+                    <Switcher className={style.header_switcher} name={['RU', 'EN']} toggleTheme={()=>{}}/>
+                    <Switcher name={['L', 'N']} toggleTheme={toggleTheme}/>
                 </div>
                 <button className={style.menu_button}><img src={burger} alt="Кнопка"/></button>
             </div>

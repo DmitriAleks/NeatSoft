@@ -3,7 +3,7 @@ import arrow from '../../../../assets/icon/arrow.svg'
 
 export const Offer = ({descriptionPathOne, descriptionPathTwo, descriptionPathThree}) => {
     return (
-        <div className={style.card_block}>
+          <div className={style.card_block}>
             <span>
                  {descriptionPathOne}
             </span>

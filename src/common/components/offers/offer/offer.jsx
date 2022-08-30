@@ -15,7 +15,7 @@ export const Offer = ({descriptionPathOne, descriptionPathTwo, descriptionPathTh
             </span>
             <div className={style.footer_card}>
                 <span className={style.hide_text}>Поброднее</span>
-                <img src={arrow} alt=""/>
+                {/*<img src={arrow} alt=""/>*/}
             </div>
 
         </div>

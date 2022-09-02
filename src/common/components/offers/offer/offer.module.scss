@@ -10,7 +10,7 @@
   align-items: baseline;
   @include font_48_600();
   line-height: 1;
-  letter-spacing: -2.1px;
+  letter-spacing: -2px;
   color: $black_2;
   @media screen and (max-width: $tablet) {
     padding: 40px;

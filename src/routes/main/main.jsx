@@ -6,7 +6,8 @@ import {Offers} from "../../common/components/offers/offers";
 
 export const Main = () => {
 
-    return (<div className={style.container}>
+    return (
+        <div className={style.container}>
         <Header/>
         <Welcome/>
         <Offers/>

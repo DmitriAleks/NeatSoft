@@ -1,0 +1,26 @@
+@import '../../../common/styles/sass/variables';
+@import '../../../common/styles/sass/mixins';
+
+.content {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 20px;
+    color: $grey_3;
+    .selected_link {
+        @include font_32_600();
+        color: $black_2;
+        @media screen and (max-width: $tablet) {
+            @include font_20_600();
+        }
+    }
+
+    .link {
+        margin: 16px 0;
+        @include font_20_500();
+
+        @media screen and (max-width: $tablet) {
+            @include font_16_500();
+        }
+    }
+}

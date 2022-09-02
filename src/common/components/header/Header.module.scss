@@ -1,0 +1,56 @@
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: $tablet) {
+        padding: 12px 24px;
+    }
+
+    .links_block {
+        color: $grey;
+        @include font_14_500();
+        padding: 20px 0;
+
+        .link {
+            padding-left: 48px;
+            cursor: pointer;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    .switchers_block {
+        display: flex;
+
+        .hide_button {
+            @media screen and (max-width: $phone) {
+                display: none;
+            }
+        }
+
+        .header_switcher {
+            &:first-child {
+                @media screen and (max-width: $phone) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .menu_button {
+        margin-left: 30px;
+    }
+
+    .button_block {
+        display: flex;
+    }
+}

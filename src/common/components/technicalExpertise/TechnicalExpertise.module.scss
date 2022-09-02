@@ -1,0 +1,66 @@
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
+.content {
+    padding-top: 200px;
+    @media screen and (max-width: $phone) {
+        text-align: center;
+        padding-top: 120px;
+    }
+    .hide {
+        display: none;
+        @media screen and (max-width: $phone) {
+            text-align: center;
+            display: block;
+            @include font_32_600();
+            color: $black_2;
+            margin-bottom: 48px;
+        }
+    }
+    .title {
+        @include font_48_600(40px, 32px);
+        color: $black_2;
+        margin-bottom: 24px;
+    }
+    .description {
+        color: $grey;
+        @include font_16_500();
+        margin-bottom: 56px;
+    }
+    .card_block {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 56px 24px;
+        @media screen and (max-width: $tablet) {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px 24px;
+        }
+        @media screen and (max-width: $phone) {
+            display: flex;
+            width: auto;
+            overflow: scroll;
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+            .icon {
+                padding: 0 20px;
+            }
+        }
+    }
+
+    .carousel_wrapper {
+        display: none;
+
+        @media screen and (max-width: $phone) {
+            display: flex;
+            width: auto;
+            overflow: scroll;
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+            .icon {
+                padding: 0 20px;
+            }
+        }
+    }
+}

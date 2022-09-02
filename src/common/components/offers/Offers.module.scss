@@ -1,0 +1,16 @@
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    @media screen and (max-width: $tablet) {
+        padding: 0 24px;
+    }
+    @media screen and (max-width: $phone) {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+        gap: 8px;
+    }
+}

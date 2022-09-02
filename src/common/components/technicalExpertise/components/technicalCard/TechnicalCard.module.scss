@@ -1,0 +1,35 @@
+@import '../../../../styles/sass/mixins';
+@import '../../../../styles/sass/variables';
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .block {
+        background-color: $grey_2;
+        height: 100px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        @media screen and (max-width: $tablet) {
+            width: 156px;
+        }
+        @media screen and (max-width: $phone) {
+            height: 90px;
+            width: 90px;
+        }
+    }
+    .name {
+        color: $grey_3;
+        @include font_12_500();
+    }
+}
+
+.content + .content {
+    margin-left: 5px;
+}

@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  @include font_48_600();
+  @include font_48_600(24px, 20px);
   line-height: 1;
   letter-spacing: -2px;
   color: $black_2;
@@ -24,7 +24,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .footer_card{
+
+  .footer_card {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 18px;
@@ -35,6 +36,7 @@
     @media screen and (max-width: $phone) {
       margin-top: 24px;
     }
+
     .hide_text {
       @include font_16_500();
       color: $blue;

@@ -1,0 +1,68 @@
+@import 'variables';
+
+@mixin container() {
+  height: 50%;
+  width: 1200px;
+  margin: 0 auto ;
+  @media screen and (max-width: $tablet){
+    width: auto;
+  }
+}
+
+
+@mixin font_12_500() {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+@mixin font_14_500() {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@mixin font_16_500() {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@mixin font_20_400() {
+  font-weight: 400;
+  font-size: 20px;
+  @media screen and (max-width: $phone) {
+    font-size: 16px;
+  }
+}
+
+@mixin font_20_500() {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+@mixin font_20_600() {
+  font-weight: 600;
+  font-size: 20px;
+}
+@mixin font_32_600() {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+@mixin font_48_600($tablet-font-size: 48px, $phone-font-size: 48px) {
+  font-weight: 600;
+  font-size: 48px;
+  @media screen and (max-width: $tablet) {
+    font-size: $tablet-font-size;
+  }
+@media screen and (max-width:$phone) {
+  font-size: 20px;
+}
+}
+
+
+@mixin font_96_600() {
+  font-weight: 600;
+  font-size: 96px;
+  @media screen and (max-width: $phone) {
+    font-size: 44px;
+  }
+}

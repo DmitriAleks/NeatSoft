@@ -1,0 +1,29 @@
+@import '../../styles/sass/mixins';
+@import '../../styles/sass/variables';
+
+.content {
+    .title {
+        display: none;
+        @media screen and (max-width: $phone) {
+            display: block;
+            @include font_32_600();
+            margin-bottom: 48px;
+            text-align: center;
+        }
+    }
+    .hide_block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 74px 56px;
+        @media screen and (max-width: $phone) {
+            display: none;
+        }
+    }
+
+    .slider_block {
+        display: none;
+        @media screen and (max-width: $phone) {
+            display: block;
+        }
+    }
+}

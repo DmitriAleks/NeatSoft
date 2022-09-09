@@ -1,0 +1,52 @@
+@import '../../../../styles/sass/mixins';
+@import '../../../../styles/sass/variables';
+
+.content {
+    background-color: $grey_2;
+    border-radius: 8px;
+    padding: 45px 16px 40px;
+    text-align: center;
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        .title {
+            margin-left: 17px;
+            @include font_20_600;
+            color: $black_2;
+        }
+    }
+    .description {
+        color: $grey;
+        @include font_14_500;
+        margin-bottom: 40px;
+    }
+
+    .switcher {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: $grey_4;
+        }
+        .selected {
+         background-color: #4C5EFE;
+        }
+
+        .button {
+            background-color: $white_2;
+            padding: 10px;
+            border-radius: 100%;
+        }
+
+        .button_reverse {
+            transform: rotateZ(180deg);
+        }
+    }
+}

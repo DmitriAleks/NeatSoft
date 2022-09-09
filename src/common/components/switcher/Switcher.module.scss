@@ -1,0 +1,27 @@
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
+.block {
+    margin: 0 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $white;
+    width: 86px;
+    border-radius: 100px;
+    transition: 0.1s all ease;
+    @include font_14_500();
+
+    text-align: center;
+    .side {
+        border-radius: 100px;
+        padding: 5px 0;
+        transition: 0.1s all ease;
+    }
+
+    .active {
+        background: $blue;
+        width: 100%;
+        height: 100%;
+        transition: 0.1s all ease;
+    }
+}

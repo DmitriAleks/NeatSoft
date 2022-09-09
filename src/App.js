@@ -1,10 +1,7 @@
 import './App.css';
-import {Main} from "./routes/main/main";
+import {Main} from "./routes/main/Main";
 
 function App() {
-  return (
-      <Main/>
-  );
+    return <Main />;
 }
-
 export default App;

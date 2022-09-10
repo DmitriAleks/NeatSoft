@@ -1,37 +1,50 @@
 export const arrLinks = [
     {
-        name: 'Технологии',
+        title: 'Услуги',
         link: '/#',
-        id: 1,
+        id: 0,
+        name: 'service'
     },
     {
-        name: 'Специализации',
+        title: 'Технологии',
+        link: '/technology',
+        id: 1,
+        name: 'technology'
+    },
+    {
+        title: 'Специализации',
         link: '/#',
         id: 2,
+        name: 'test'
     },
     {
-        name: 'Клиенты',
+        title: 'Клиенты',
         link: '/#',
         id: 3,
+        name: 'test'
     },
     {
-        name: 'Команды',
+        title: 'Команды',
         link: '/#',
         id: 4,
+        name: 'test'
     },
     {
-        name: 'Кейсы',
+        title: 'Кейсы',
         link: '/#',
         id: 5,
+        name: 'test'
     },
     {
-        name: 'Новости',
+        title: 'Новости',
         link: '/#',
         id: 6,
+        name: 'test'
     },
     {
-        name: 'Контакты',
+        title: 'Контакты',
         link: '/#',
         id: 7,
+        name: 'test'
     },
 ];

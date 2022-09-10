@@ -6,7 +6,7 @@ import { SliderCard } from './components/sliderCard/SliderCard';
 
 export const Services = () => {
     return (
-        <div className={style.content}>
+        <section className={style.content} id='service'>
             <h3 className={style.title}>Услуги</h3>
             <div className={style.hide_block}>
                 {arrServicesCard.map((el) => (
@@ -21,6 +21,6 @@ export const Services = () => {
             <div className={style.slider_block}>
                 <SliderCard arrCard={arrServicesCard} />
             </div>
-        </div>
+        </section>
     );
 };

@@ -5,8 +5,11 @@ import burger from '../../../assets/icon/burger.svg';
 import { Switcher } from '../switcher/Switcher';
 import { arrHeaderLinks } from './headerData';
 
-const LIGHT_THEME = 'light';
-const DARK_THEME = 'dark';
+const LIGHT_THEME = 'L';
+const NIGHT_THEME = 'N';
+
+const ENGLISH_LANGUAGE = 'EN'
+const RUSSIAN_LANGUAGE = 'RU'
 
 export const Header = () => {
     const [theme, setTheme] = useState(LIGHT_THEME);
@@ -14,11 +17,11 @@ export const Header = () => {
         document.body.setAttribute('data-theme', theme);
     }, [theme]);
     const toggleTheme = () => {
-        setTheme(theme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME);
+        setTheme(theme === LIGHT_THEME ? NIGHT_THEME : LIGHT_THEME);
     };
 
     return (
-        <div className={style.header}>
+        <header className={style.header}>
             <img src={logo} alt="NeatSoft logo" />
             <div className={style.links_block}>
                 {arrHeaderLinks.map((el) => (
@@ -31,15 +34,15 @@ export const Header = () => {
                 <div className={style.switchers_block}>
                     <Switcher
                         className={style.header_switcher}
-                        name={['RU', 'EN']}
+                        name={[RUSSIAN_LANGUAGE, ENGLISH_LANGUAGE]}
                         toggleTheme={() => {}}
                     />
-                    <Switcher name={['L', 'N']} toggleTheme={toggleTheme} />
+                    <Switcher name={[LIGHT_THEME, NIGHT_THEME]} toggleTheme={toggleTheme} />
                 </div>
                 <button type="button" className={style.menu_button}>
-                    <img src={burger} alt="Кнопка" />
+                    <img src={burger} alt="Кнопка меню" />
                 </button>
             </div>
-        </div>
+        </header>
     );
 };

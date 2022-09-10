@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Ubuntu+Mono&display=swap');
 
 body {
-  font-family:'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 /* Указываем box sizing */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
-  padding: 0;
+    padding: 0;
 }
 
 /* Убираем внешние отступы */
@@ -33,37 +33,37 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
+    margin: 0;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
-  list-style: none;
+    list-style: none;
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 /* Упрощаем работу с изображениями */
 img {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
-  margin-top: 1em;
+    margin-top: 1em;
 }
 
 /* Наследуем шрифты для инпутов и кнопок */
@@ -71,45 +71,48 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
-button{
-  border: none;
-  outline: none;
-  background: transparent;
+button {
+    border: none;
+    outline: none;
+    background: transparent;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
 }
-body[data-theme='light'] {
-  --colors-text: hsl(0, 0%, 100%);
-  background:#ffffff;
-  --colors-ui-base: hsl(209, 23%, 22%);
+body[data-theme='L'] {
+    --colors-text: hsl(0, 0%, 100%);
+    background: #ffffff;
+    --colors-ui-base: hsl(209, 23%, 22%);
 
-  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+    --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
 }
-body[data-theme='dark'] {
-  background: hsl(200, 15%, 8%);
-  text: hsl(0, 0%, 98%);
-  --colors-ui-base: hsl(0, 0%, 100%);
+body[data-theme='N'] {
+    background: hsl(200, 15%, 8%);
+    text: hsl(0, 0%, 98%);
+    --colors-ui-base: hsl(0, 0%, 100%);
 
-  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+    color: inherit;
+    text-decoration: inherit;
 }
+/*svg  {*/
+/*    fill: inherit;*/
+/*}*/

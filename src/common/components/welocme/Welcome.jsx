@@ -1,10 +1,11 @@
 import style from './Welcome.module.scss';
 import technologyStack from '../../../assets/image/technologiStack.png';
 import { arrIcons } from './welcomeData';
+import {Icon} from "../icon/Icon";
 
 export const Welcome = () => {
     return (
-        <div className={style.content}>
+        <section className={style.content}>
             <div className={style.greetings}>
                 <h1 className={style.title}>
                     Ваш IT-отдел
@@ -21,9 +22,11 @@ export const Welcome = () => {
             </div>
             <div className={style.carousel_wrapper}>
                 {arrIcons.map((el) => (
-                    <img className={style.icon} src={el.icon} alt={el.name} />
+                    <div className={style.icon}>
+                        <Icon style={{  padding: '0 20px'}} logo={el.name}/>
+                    </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };

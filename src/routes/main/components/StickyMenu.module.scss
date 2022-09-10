@@ -23,4 +23,11 @@
             @include font_16_500();
         }
     }
+    .active{
+        @include font_32_600();
+        color: $black_2;
+        @media screen and (max-width: $tablet) {
+            @include font_20_600();
+        }
+    }
 }

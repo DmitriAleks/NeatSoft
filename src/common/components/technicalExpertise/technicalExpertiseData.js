@@ -1,66 +1,99 @@
+
 export const technicalExpertiseData = [
     {
         id: 1,
-        name: 'ANGULAR',
+        title: 'ANGULAR',
+        logo: 'angular',
+        color: "#dd0031"
     },
     {
         id: 2,
-        name: 'REACT',
+        title: 'REACT',
+        logo: 'react',
+        color: "#61dafb"
     },
     {
         id: 3,
-        name: 'JAVASCRIPT',
+        title: 'JAVASCRIPT',
+        logo: 'javascript',
+        color: "#efd81d"
     },
     {
         id: 4,
-        name: 'VUE',
+        title: 'NEST.JS',
+        logo: 'nest.js',
+        color: "#d9224c"
     },
     {
         id: 5,
-        name: 'JAVA',
+        title: 'YII2',
+        logo: 'yii2',
+        color: "#e98629"
     },
     {
         id: 6,
-        name: 'SPRING',
+        title: 'DOCKER',
+        logo: 'docker',
+        color: "#24b2e5"
     },
     {
         id: 7,
-        name: 'LARAVEL',
+        title: 'LINUX',
+        logo: 'linux',
+        color: "#d9224c"
     },
     {
         id: 8,
-        name: 'PHP',
+        title: 'ANGULAR',
+        logo: 'angular',
+        color: "#dd0031"
     },
     {
         id: 9,
-        name: 'YII2',
+        title: 'REACT',
+        logo: 'react',
+        color: "#61dafb"
     },
     {
         id: 10,
-        name: 'NODE.JS',
+        title: 'JAVASCRIPT',
+        logo: 'javascript',
+        color: "#efd81d"
     },
     {
         id: 11,
-        name: 'EXPRESS',
+        title: 'NEST.JS',
+        logo: 'nest.js',
+        color: "#d9224c"
     },
     {
         id: 12,
-        name: 'LINUX',
+        title: 'YII2',
+        logo: 'yii2',
+        color: "#e98629"
     },
     {
         id: 13,
-        name: 'GRAFANA',
+        title: 'DOCKER',
+        logo: 'docker',
+        color: "#24b2e5"
     },
     {
         id: 14,
-        name: 'DOCKER',
+        title: 'LINUX',
+        logo: 'linux',
+        color: "#d9224c"
     },
     {
         id: 15,
-        name: 'TYPESCRIPT',
+        title: 'JAVASCRIPT',
+        logo: 'javascript',
+        color: "#efd81d"
     },
     {
         id: 16,
-        name: 'NEST.JS',
+        title: 'NEST.JS',
+        logo: 'nest.js',
+        color: "#d9224c"
     },
 ];

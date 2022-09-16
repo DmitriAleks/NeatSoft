@@ -1,14 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import style from './SliderCard.module.scss';
 import logo from '../../../../../assets/icon/miniLogo.svg';
-import arrow from '../../../../../assets/icon/littleArrow.svg';
-
-const STEP_NEXT = 'next'
-const STEP_BACK = 'back'
+import { ReactComponent as LittleArrow } from '../../../../../assets/icon/littleArrow.svg';
+import darkLogo from '../../../../../assets/icon/miniDarkLogo.svg';
+import { ThemeContext } from '../../../../../App';
+import {
+    LIGHT_THEME,
+    STEP_BACK,
+    STEP_NEXT,
+} from '../../../../constants/constants';
 
 export const SliderCard = ({ arrCard }) => {
     const [selected, setSelected] = useState(0);
     const [currentService, setCurrentService] = useState(arrCard[0]);
+    const themeControl = useContext(ThemeContext);
     useEffect(() => {
         setCurrentService(arrCard[selected]);
     }, [selected]);
@@ -31,7 +36,12 @@ export const SliderCard = ({ arrCard }) => {
     return (
         <div className={style.content}>
             <div className={style.header}>
-                <img src={logo} alt="NeatSoft logo" />
+                <img
+                    src={
+                        themeControl.themeName === LIGHT_THEME ? logo : darkLogo
+                    }
+                    alt="NeatSoft logo"
+                />
                 <span className={style.title}> {currentService.title}</span>
             </div>
             <p className={style.description}>{currentService.description}</p>
@@ -43,15 +53,15 @@ export const SliderCard = ({ arrCard }) => {
                         changeSelected(STEP_BACK);
                     }}
                 >
-                    <img src={arrow} alt="arrow-left" />
+                   <LittleArrow fill={ themeControl.themeName === LIGHT_THEME ? '#4C5EFE' : '#68f7c3'}/>
                 </button>
                 {arrCard.map((el, index) => (
                     <div
                         className={`${style.circle} ${
                             selected === index ? style.selected : ''
                         }`}
-                        onClick={()=>{
-                            setSelected(index)
+                        onClick={() => {
+                            setSelected(index);
                         }}
                     ></div>
                 ))}
@@ -62,7 +72,7 @@ export const SliderCard = ({ arrCard }) => {
                         changeSelected(STEP_NEXT);
                     }}
                 >
-                    <img src={arrow} alt="arrow-right" />
+                    <LittleArrow fill={ themeControl.themeName === LIGHT_THEME ? '#4C5EFE' : '#68f7c3'} />
                 </button>
             </div>
         </div>

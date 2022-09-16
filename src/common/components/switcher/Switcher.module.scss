@@ -1,5 +1,5 @@
-@import '../../styles/sass/variables';
-@import '../../styles/sass/mixins';
+@import '../../styles/scss/variables';
+@import '../../styles/scss/mixins';
 
 .block {
     margin: 0 12px;
@@ -10,6 +10,7 @@
     border-radius: 100px;
     transition: 0.1s all ease;
     @include font_14_500();
+    cursor: pointer;
 
     text-align: center;
     .side {

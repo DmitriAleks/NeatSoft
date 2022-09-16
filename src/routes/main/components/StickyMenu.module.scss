@@ -1,5 +1,5 @@
-@import '../../../common/styles/sass/variables';
-@import '../../../common/styles/sass/mixins';
+@import '../../../common/styles/scss/variables';
+@import '../../../common/styles/scss/mixins';
 
 .content {
     display: flex;
@@ -22,8 +22,11 @@
         @media screen and (max-width: $tablet) {
             @include font_16_500();
         }
+        &:hover {
+            color: $blue;
+        }
     }
-    .active{
+    .active {
         @include font_32_600();
         color: $black_2;
         @media screen and (max-width: $tablet) {

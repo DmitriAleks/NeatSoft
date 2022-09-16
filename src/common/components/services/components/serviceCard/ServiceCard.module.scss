@@ -1,29 +1,28 @@
-@import "../../../../styles/sass/mixins";
-@import "../../../../styles/sass/variables";
+@import '../../../../styles/scss/mixins';
+@import '../../../../styles/scss/variables';
 
 .content {
-  @media screen and (max-width: $phone) { //всё что внутри времено, для моб
-    padding-left: 50px;
-  }
-  .icon {
-    margin-bottom: 30px;
     @media screen and (max-width: $phone) {
-      display: grid;
+        padding-left: 50px;
     }
-  }
-
-  .title {
-    @include font_20_600();
-    margin-bottom: 16px;
-
-  }
-
-  .description {
-    @include font_16_500();
-    color: $grey;
-    @media screen and (max-width: $phone) { //не могу добавить медиа в миксинах т.к. этот шрифт исп в другом месте, но при адаптиве не меняется
-      @include font_14_500();
+    .icon {
+        margin-bottom: 30px;
+        @media screen and (max-width: $phone) {
+            display: grid;
+        }
     }
-  }
 
+    .title {
+        @include font_20_600();
+        margin-bottom: 16px;
+        color: $black;
+    }
+
+    .description {
+        @include font_16_500();
+        color: $grey;
+        @media screen and (max-width: $phone) {
+            @include font_14_500();
+        }
+    }
 }

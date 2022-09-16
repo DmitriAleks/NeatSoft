@@ -1,5 +1,5 @@
-@import '../../../../styles/sass/mixins';
-@import '../../../../styles/sass/variables';
+@import '../../../../styles/scss/mixins';
+@import '../../../../styles/scss/variables';
 
 .content {
     background-color: $grey_2;
@@ -36,7 +36,7 @@
             background-color: $grey_4;
         }
         .selected {
-         background-color: #4C5EFE;
+            background-color: $blue;
         }
 
         .button {

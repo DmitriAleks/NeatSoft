@@ -4,6 +4,7 @@ import { ThemeContext } from '../../../../App';
 import { LIGHT_THEME } from '../../../constants/constants';
 import { ReactComponent as Arrow } from '../../../../assets/icon/arrow.svg';
 
+
 export const Offer = ({
     descriptionPathOne,
     descriptionPathTwo,

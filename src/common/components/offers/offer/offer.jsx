@@ -6,10 +6,10 @@ import { ReactComponent as Arrow } from '../../../../assets/icon/arrow.svg';
 
 
 export const Offer = ({
-    descriptionPathOne,
-    descriptionPathTwo,
-    descriptionPathThree,
-}) => {
+                          descriptionPathOne,
+                          descriptionPathTwo,
+                          descriptionPathThree,
+                      }) => {
     const themeControl = useContext(ThemeContext);
     return (
         <div

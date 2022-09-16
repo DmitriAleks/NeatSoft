@@ -21,7 +21,13 @@ export const Offer = ({
             <span>{descriptionPathThree}</span>
             <div className={style.footer_card}>
                 <span className={style.hide_text}>Поброднее</span>
-                <Arrow fill={themeControl.themeName === LIGHT_THEME ? '#4C5EFE' : '#ececec'}/>
+                <Arrow
+                    fill={
+                        themeControl.themeName === LIGHT_THEME
+                            ? '#4C5EFE'
+                            : '#ececec'
+                    }
+                />
             </div>
         </div>
     );

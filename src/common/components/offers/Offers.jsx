@@ -3,7 +3,7 @@ import { Offer } from './offer/Offer';
 
 export const Offers = () => {
     return (
-        <div className={style.content}>
+        <section className={style.content}>
             <Offer
                 descriptionPathOne="Разрабатываем"
                 descriptionPathTwo="софт и приложения"
@@ -14,6 +14,6 @@ export const Offers = () => {
                 descriptionPathTwo=" разработчиков"
                 descriptionPathThree="от уровня middle."
             />
-        </div>
+        </section>
     );
 };

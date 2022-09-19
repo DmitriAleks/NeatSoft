@@ -1,11 +1,11 @@
 import style from './TechnicalExpertise.module.scss';
 import { TechnicalCard } from './components/technicalCard/TechnicalCard';
 import { technicalExpertiseData } from './technicalExpertiseData';
-import reactIcon from '../../../assets/icon/react.svg';
+
 
 export const TechnicalExpertise = () => {
     return (
-        <div className={style.content}>
+        <section className={style.content} id='technology'>
             <h3 className={style.hide}>Технологии</h3>
             <h4 className={style.title}>Техническая экспертиза</h4>
             <p className={style.description}>
@@ -15,9 +15,9 @@ export const TechnicalExpertise = () => {
             </p>
             <div className={style.card_block}>
                 {technicalExpertiseData.map((el) => (
-                    <TechnicalCard logo={reactIcon} name={el.name} />
+                    <TechnicalCard logo={el.logo} title={el.title} color={el.color}/>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
